@@ -6,7 +6,7 @@ require('dotenv').config()
 
 let app = express();
 
-const loc = 'C:\\Users\\rkcst\\GDSC Project'
+const loc = process.cwd()
 let temperature = "0"
 let city = "0"
 let min = "0"
