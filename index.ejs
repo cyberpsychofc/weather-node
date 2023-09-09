@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+          <form style="padding: 5px" action="/" method="POST">
+            <input type="text" name="city" placeholder="Enter City Name" spellcheck="false">
+          <button><img src="./assets/search.png"></button>
+          </form>
+      </div>
+      <div class="weather">
+          <img src="./assets/cloudy-day-1.svg" class="weather-icon" style="width: 200px; height: 200px;">
+          <h1 class="temp" style="padding: 5px; font-size: 40px"><%= temperature %></h1>
+          <div class="forcast">
+            <h2 name="min" style="display: inline-block;padding-right: 10px;font-size:medium"><%= min %></h2>
+            <h2 name="max" style="display: inline-block;padding-left: 10px;font-size:medium"><%= max %></h2>
+          </div>
+          <h2 class="city" style="padding: 10px;"><%= city %></h2>
+      </div>
+      <div class="search">
+          <form action="/" method="POST">
+            <input type="date" id="date" name="date">
+            <input type="submit">
+          </form>
+      </div>
+  </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
