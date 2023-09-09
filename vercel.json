@@ -1,7 +1,7 @@
 {
     "version":2,
     "builds":[{
-        "src":"main.js",
+        "src":"index.js",
         "use":"@vercel/node"
     }],
     "routes":[
@@ -9,5 +9,6 @@
             "src":"/(.*)",
             "dest":"/"
         }
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.ejs" }]
 }
